@@ -28,6 +28,7 @@ const AuthContextProvider = ({ children }) => {
   const logoutHandler = () => {
     setToken(null);
     localStorage.removeItem("token");
+    alert("logout Success");
   };
 
   // Step 5️⃣ Derived state
