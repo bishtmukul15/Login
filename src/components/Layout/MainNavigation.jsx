@@ -18,21 +18,18 @@ const MainNavigation = () => {
       </Link>
       <nav>
         <ul>
-          {!authCtx.isLoggedIn && (
+          <li>
+            <Link to="/auth">Login</Link>
+          </li>
+
+          <>
             <li>
-              <Link to="/auth">Login</Link>
+              <Link to="/profile">Profile</Link>
             </li>
-          )}
-          {authCtx.isLoggedIn && (
-            <>
-              <li>
-                <Link to="/profile">Profile</Link>
-              </li>
-              <li>
-                <button onClick={handleLogout}>Logout</button>
-              </li>
-            </>
-          )}
+            <li>
+              <button onClick={handleLogout}>Logout</button>
+            </li>
+          </>
         </ul>
       </nav>
     </header>
