@@ -6,7 +6,9 @@ import AuthContextProvider from "./Store/AuthContext.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthContextProvider>
-      <BrowserRouter>
+      <BrowserRouter
+        future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+      >
         <App />
       </BrowserRouter>
     </AuthContextProvider>
